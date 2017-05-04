@@ -1,5 +1,12 @@
 package edu.nyu.cs.ll3094;
 
+/**
+ * The class represents a list of tree objects
+ * Contains functions to calculate tree counts based on specific areas    
+ * @author Lorraine Leung
+ * @version February 10, 2017
+ */
+
 import java.util.ArrayList;
 
 public class TreeList extends ArrayList<Tree>{
@@ -15,7 +22,7 @@ public class TreeList extends ArrayList<Tree>{
 	}
 	
 	/**
-	 * method that returns total number of Tree objects in the list 
+	 * Returns total number of Tree objects in the list 
 	 * @param no param 
 	 * @return integer, total number of tree objects  
 	 */
@@ -25,7 +32,7 @@ public class TreeList extends ArrayList<Tree>{
 	}
 
 	/**
-	 * method that get number of tree objects based on species name 
+	 * Get number of tree objects based on species name 
 	 * @param String, the species name 
 	 * @return integer, total number of trees with that species name
 	 */
@@ -40,7 +47,7 @@ public class TreeList extends ArrayList<Tree>{
 	}
 	
 	/**
-	 * method that get number of trees by borough name 
+	 * Get number of trees by borough name 
 	 * @param String, borough name
 	 * @return integer, total number of trees in that borough 
 	 */
@@ -55,7 +62,7 @@ public class TreeList extends ArrayList<Tree>{
 	}
 	
 	/**
-	 * method that gets number of trees within a specified borough
+	 * Gets number of trees within a specified borough
 	 * @param String, species name
 	 * @param String, borough name
 	 * @return integer, total number of trees  
@@ -71,7 +78,7 @@ public class TreeList extends ArrayList<Tree>{
 	}
 	
 	/**
-	 * method returns a list of species 
+	 * Returns a list of species 
 	 * @param String, species name 
 	 * @return an arraylist of string representation of the trees 
 	 */
@@ -92,7 +99,7 @@ public class TreeList extends ArrayList<Tree>{
 	
 	@Override 
 	/**
-	 * method overrides toString method  
+	 * Overrides toString method  
 	 * @return String, object representation 
 	 */
 	public String toString(){

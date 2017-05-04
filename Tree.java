@@ -1,5 +1,12 @@
 package edu.nyu.cs.ll3094;
 
+/**
+ * The class represents a tree object 
+ * Implements comparable interface   
+ * @author Lorraine Leung
+ * @version February 10, 2017
+ */
+
 public class Tree implements Comparable<Tree> {
 	
 	//All data fields for the tree 
@@ -20,13 +27,13 @@ public class Tree implements Comparable<Tree> {
 	public Tree (int id, int diam, String status, String health, String spc, int zip, String boro, double x, double y){
 		this.setTreeID(id);
 		this.setTreeDBH(diam);
-		this.STATUS = status;
-		this.HEALTH = health;
-		this.SPC_COMMON = spc;
-		this.ZIPCODE = zip;
-		this.BORONAME = boro;
-		this.X_SP = x;
-		this.Y_SP = y;
+		this.setStatus(status);
+		this.setHealth(health);
+		this.setSpecies(spc);
+		this.setZIP(zip);
+		this.setBoro(boro);
+		this.setX(x);
+		this.setY(y);
 	}
 	
 	/**
@@ -73,10 +80,14 @@ public class Tree implements Comparable<Tree> {
 	
 	/**
 	 * Setter for tree status
+	 * Takes null as a status 
 	 * @param string for tree status 
 	 */
 	public void setStatus(String status) throws IllegalArgumentException{
-		if (status.equalsIgnoreCase("Alive")||status.equalsIgnoreCase("Dead")||status.equalsIgnoreCase("Stump")||status.equals("")||status==null){
+		if(status==null){
+			this.STATUS=null;
+		}
+		else if (status.equalsIgnoreCase("Alive")||status.equalsIgnoreCase("Dead")||status.equalsIgnoreCase("Stump")||status.equals("")){
 			this.STATUS = status;
 		}
 		else{
@@ -94,10 +105,14 @@ public class Tree implements Comparable<Tree> {
 	
 	/**
 	 * Setter for tree health
+	 * Takes null as a parameter 
 	 * @param string for tree health status 
 	 */
 	public void setHealth (String health) throws IllegalArgumentException{
-		if (health.equalsIgnoreCase("Good")||health.equalsIgnoreCase("Fair")||health.equalsIgnoreCase("Poor")||health.equals("")||health==null){
+		if(health==null){
+			this.HEALTH = null;
+		}
+		else if (health.equalsIgnoreCase("Good")||health.equalsIgnoreCase("Fair")||health.equalsIgnoreCase("Poor")||health.equals("")){
 			this.HEALTH = health;
 		}
 		else{

@@ -1,5 +1,11 @@
 package edu.nyu.cs.ll3094;
 
+/**
+ * The class runs the system and prints out NYC street tree data results to users  
+ * @author Lorraine Leung
+ * @version February 10, 2017
+ */
+
 import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
@@ -10,7 +16,16 @@ public class NYCStreetTrees{
 		
 		
 		//Ask user for file name 
-		String fileName = args[0];
+		String fileName = null;
+		
+		//Check user did input something 
+		if (args.length==0){
+			System.err.println("No input given");
+			System.exit(0);
+		}
+		else{
+			fileName = args[0];
+		}
 		
 		//String to store all the data read 
 		ArrayList<ArrayList<String>> dataTable = new ArrayList<ArrayList<String>>();
